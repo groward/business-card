@@ -150,7 +150,7 @@ svg {
         border-radius: 0;
         box-shadow: none;
         position: relative;
-        max-width: 100vh;
+        max-width: 100%;
         min-width: 0;
         /* min-width: 430px; */
     }
@@ -158,7 +158,7 @@ svg {
     .cta-button {
         position: absolute;
         bottom: 0;
-        margin-bottom: 55px;
+        margin-bottom: 75px;
     }
 
     .main-text {
@@ -170,8 +170,7 @@ svg {
     }
 
     li {
-    font-size: 1.25rem;
+    font-size: 1rem;
     }
     
-
 }
