@@ -151,7 +151,8 @@ svg {
         box-shadow: none;
         position: relative;
         max-width: 100vh;
-        min-width: 430px;
+        min-width: 0;
+        /* min-width: 430px; */
     }
 
     .cta-button {
@@ -172,4 +173,5 @@ svg {
     font-size: 1.25rem;
     }
     
+
 }
