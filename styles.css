@@ -1,0 +1,175 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #16713734;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-image: url("images/gglogocorner.png");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 75vh;
+  min-height: 100vh;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.card {
+  max-width: 440px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 25px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-container {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    inset: 0;
+    pointer-events: none;
+}
+
+.header-image {
+    width: 100%;
+}
+
+.profile-image {
+    border-radius: 100%;
+    height: 110px;
+    width: 110px;
+    position: absolute;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.header {
+    margin-bottom: 135px;
+}
+
+.text-container {
+    padding: 15px;
+}
+
+.main-text {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: rgb(43, 43, 43);
+}
+
+.secondary-text {
+    font-size: 1rem;
+    color: rgb(94, 94, 94);
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+ul {
+    padding: 0;
+    margin-top: 0.5rem;
+    list-style: none;
+}
+
+li {
+    font-size: 1rem;
+    margin: 0;
+    transition: all 0.5s ease;
+}
+
+.ref-list-item {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.cta-button {
+    padding: 15px;
+    width: 45%;
+    min-width: 45%;
+    font-size: 1.25rem;
+    background-color: #167137;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: auto;
+    font-weight: 700;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: rgb(24, 124, 61);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.icon-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    padding: 7px;
+    border-radius: 100%;
+    background-color: #167137;
+}
+
+svg {
+    fill: white;
+}
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 0;
+        margin: 0;
+        background-image: none;
+        background-color: white;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        position: relative;
+        max-width: 100vh;
+        min-width: 430px;
+    }
+
+    .cta-button {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 55px;
+    }
+
+    .main-text {
+        font-size: 2rem;
+    }
+
+    .secondary-text {
+        font-size: 1.25rem;
+    }
+
+    li {
+    font-size: 1.25rem;
+    }
+    
+}
