@@ -1,14 +1,35 @@
-const contact = {
-  firstName: "Vardenis",
-  lastName: "Pavardenis",
-  org: "Groward Group",
-  title: "Sales manager",
-  phoneMobile: "+37060000000",
-  email: "vardenis@example.com",
-  website: "https://example.com",
-  note: "Hello 👋",
-  photoUrl: ""
-};
+const CONTACTS = {
+  test: {
+    firstName: "Vardenis",
+    lastName: "Pavardenis",
+    org: "Groward Group",
+    title: "Sales manager",
+    phoneMobile: "+37060000000",
+    email: "vardenis@example.com",
+    website: "https://example.com",
+    note: "Hello 👋",
+    photoUrl: "https://raw.githubusercontent.com/groward/business-card/v0.1/images/ggavatar.png"
+  },
+  laimonas: {
+    firstName: "Laimonas",
+    lastName: "Stanaitis",
+    org: "Groward Group",
+    title: "Sales manager",
+    phoneMobile: "+37061358922",
+    email: "laimonas.stanaitis@groward.eu",
+    website: "https://www.groward.eu",
+    note: "Hello 👋",
+    photoUrl: "https://raw.githubusercontent.com/groward/business-card/v0.1/images/ggavatar.png"
+  },
+}
+
+const DEFAULT_KEY = "test";
+
+function getContactFromButton() {
+  const btn = document.getElementById("downloadBtn");
+  const key = btn?.dataset.contact;
+  return CONTACTS[key] ?? null;
+}
 
 function escapeVCardValue(value) {
   return String(value ?? "")
@@ -65,7 +86,16 @@ function downloadVCF(vcfText, filename = "contact.vcf") {
 }
 
 document.getElementById("downloadBtn").addEventListener("click", async () => {
+  const contact = getContactFromButton();
+  if (!contact) {
+    alert("Contact not configured.");
+    return;
+  }
+
   const vcf = await buildVCard(contact);
-  const safeName = `${contact.firstName || "contact"}_${contact.lastName || ""}`.trim().replace(/\s+/g, "_");
-  downloadVCF(vcf, `${safeName || "contact"}.vcf`);
+  const safeName = `${contact.firstName}_${contact.lastName}`
+    .trim()
+    .replace(/\s+/g, "_");
+
+  downloadVCF(vcf, `${safeName}.vcf`);
 });
