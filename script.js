@@ -17,7 +17,7 @@ const CONTACTS = {
     title: "Sales manager",
     phoneMobile: "+37061358922",
     email: "laimonas.stanaitis@groward.eu",
-    website: "https://www.groward.eu",
+    website: "https://www.groward.eu/en",
     note: "Hello 👋",
     photoUrl: "https://raw.githubusercontent.com/groward/business-card/v0.1/images/ggavatar.png"
   },
@@ -99,4 +99,5 @@ document.getElementById("downloadBtn").addEventListener("click", async () => {
 
   downloadVCF(vcf, `${safeName}.vcf`);
 });
+
 
