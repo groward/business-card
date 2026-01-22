@@ -152,13 +152,12 @@ svg {
         position: relative;
         max-width: 100%;
         min-width: 0;
-        /* min-width: 430px; */
     }
 
     .cta-button {
         position: absolute;
         bottom: 0;
-        margin-bottom: 75px;
+        margin-bottom: 100px;
     }
 
     .main-text {
@@ -174,5 +173,3 @@ svg {
     }
     
 }
-
-
