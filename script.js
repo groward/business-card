@@ -54,7 +54,7 @@ async function buildVCard(c) {
   let photoLine = null;
   if (c.photoUrl) {
     const base64 = await fetchImageBase64(c.photoUrl);
-    photoLine = `PHOTO;ENCODING=b;TYPE=JPEG:${base64}`;
+    photoLine = `PHOTO;ENCODING=b;TYPE=PNG:${base64}`;
   }
   const lines = [
     "BEGIN:VCARD",
@@ -99,3 +99,4 @@ document.getElementById("downloadBtn").addEventListener("click", async () => {
 
   downloadVCF(vcf, `${safeName}.vcf`);
 });
+
