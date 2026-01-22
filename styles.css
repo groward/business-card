@@ -115,6 +115,19 @@ li:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     cursor: pointer;
     transition: all 0.2s ease;
+    animation: pulse-bg 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse-bg {
+  0% {
+    box-shadow: 0 0 0 0 rgba(22, 113, 55, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(22, 113, 55, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(22, 113, 55, 0);
+  }
 }
 
 .cta-button:hover {
@@ -173,3 +186,4 @@ svg {
     }
     
 }
+
